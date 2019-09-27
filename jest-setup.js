@@ -1,4 +1,7 @@
-/* eslint-env jest */
+/**
+ * @flow
+ * eslint-env jest
+ */
 
 import React from 'react';
 
@@ -8,7 +11,9 @@ jest.mock('Linking', () => ({
   removeEventListener: jest.fn(),
   openURL: jest.fn(),
   canOpenURL: jest.fn(),
-  getInitialURL: jest.fn().mockImplementation(value => Promise.resolve(value)),
+  getInitialURL: jest
+    .fn()
+    .mockImplementation((value: string) => Promise.resolve(value)),
 }));
 
 // See https://github.com/facebook/react-native/issues/11659
