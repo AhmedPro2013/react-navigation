@@ -5,6 +5,7 @@ const AnimatedText = Animated.Text;
 
 const HeaderTitle = ({ style, ...rest }) => (
   <AnimatedText
+    adjustsFontSizeToFit
     numberOfLines={1}
     {...rest}
     style={[styles.title, style]}
